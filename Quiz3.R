@@ -48,3 +48,7 @@ m3 <- m3[order(m3$Ranking, decreasing = TRUE),]
 m3[13, 1:5]
 
 #Q4
+#based on Q3
+tapply(m3$Ranking, m3$Income.Group, mean)
+
+#Q5
