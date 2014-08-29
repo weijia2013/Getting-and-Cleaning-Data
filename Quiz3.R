@@ -34,3 +34,17 @@ names(gdp)[names(gdp) == "X.3"] <- "UD"
 gdp <- gdp[-1,]
 #subset gdp, new gdp include 190 countries and 4 variables
 gdp <- gdp[1:190, c(1,2,4,5)]
+#load Edu file
+edu <- read.csv("./GCD/q3.3Edu.csv")
+#Merge gdp and edu by merge function. all = FALSE indicate only find the match countrycode
+m3 <- merge(gdp, edu, by.x = "CC", by.y = "CountryCode", all = FALSE)
+#chack class of m3$Ranking
+class(m3$Ranking)
+#Class is factor, factor need to be changes to numeric and keep the origional value
+m3$Ranking <- as.numeric(as.character(m3$Ranking))
+#Order m3 by decreasing Ranking
+m3 <- m3[order(m3$Ranking, decreasing = TRUE),]
+#get the 13th row of the m3 data frame
+m3[13, 1:5]
+
+#Q4
