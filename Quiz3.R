@@ -52,3 +52,9 @@ m3[13, 1:5]
 tapply(m3$Ranking, m3$Income.Group, mean)
 
 #Q5
+#Adding a new col named qRanking to m3 by cut function
+m3$qRanking <- cut(m3$Ranking, breaks = quantile(m3$Ranking, probs = c(0, .2, .4, .6, .8, 1)), include.lowest = TRUE)
+#Group m3 by quartiles of qRanking for Income.Group
+aggregate(m3$Income.Group == "Lower middle income", data.frame(qRanking = m3$qRanking), FUN = table)
+#or chech all levels of Income.Group
+aggregate(m3$Income.Group, data.frame(qRanking = m3$qRanking), FUN = table)
