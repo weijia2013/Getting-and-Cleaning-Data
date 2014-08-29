@@ -33,4 +33,4 @@ names(gdp)[names(gdp) == "X.3"] <- "UD"
 #remove row 1
 gdp <- gdp[-1,]
 #subset gdp, new gdp include 190 countries and 4 variables
-gdp <- gdp[, c(1,2,4,5)]
+gdp <- gdp[1:190, c(1,2,4,5)]
