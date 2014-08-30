@@ -31,3 +31,4 @@ gdp$UD <- as.numeric(as.character(gdp$UD))
 mean(gdp$UD)
 
 #Q3
+length(grep("^United", gdp$Economy))
