@@ -55,4 +55,16 @@ m3 <- merge(gdp, edu, by.x = "CC", by.y = "CountryCode", all = FALSE)
 length(grep("end: June", m3$Special.Notes))
 
 #Q5
+#Install package quantmod
+#load package quantmod
+library(quantmod)
+amzn = getSymbols("AMZN",auto.assign=FALSE)
+sampleTimes = index(amzn)
 length(grep("^2012", index(amzn)))
+#Add new col day to amzn
+amzn$day <- as.Date(index(amzn))
+amzn$day <- weekdays(as.Date(index(amzn)))
+#subset amzn only with 2012 data
+amzn2012 <- amzn[grep("^2012", index(amzn))]
+#Calculate number of Monday
+length(grep("Monday", amzn2012$day))
