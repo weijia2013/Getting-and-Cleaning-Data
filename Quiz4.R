@@ -55,3 +55,4 @@ m3 <- merge(gdp, edu, by.x = "CC", by.y = "CountryCode", all = FALSE)
 length(grep("end: June", m3$Special.Notes))
 
 #Q5
+length(grep("^2012", index(amzn)))
