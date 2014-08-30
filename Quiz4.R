@@ -32,3 +32,26 @@ mean(gdp$UD)
 
 #Q3
 length(grep("^United", gdp$Economy))
+
+#Q4
+gdp <- read.csv("./GCD/q3.3GDP.csv")
+#cleaning gdp data
+#remove row 1, 2 and 4
+gdp <- gdp[c(-1,-2,-4),]
+#rename variable name
+names(gdp)[names(gdp) == "X"] <- "CC" #CC means CountryCode
+names(gdp)[names(gdp) == "Gross.domestic.product.2012"] <- "Ranking"
+names(gdp)[names(gdp) == "X.2"] <- "Economy"
+names(gdp)[names(gdp) == "X.3"] <- "UD"
+#remove row 1
+gdp <- gdp[-1,]
+#subset gdp, new gdp include 190 countries and 4 variables
+gdp <- gdp[1:190, c(1,2,4,5)]
+#load Edu file
+edu <- read.csv("./GCD/q3.3Edu.csv")
+#Merge gdp and edu by merge function. all = FALSE indicate only find the match countrycode
+m3 <- merge(gdp, edu, by.x = "CC", by.y = "CountryCode", all = FALSE)
+#Use grep function find the term "end: June"
+length(grep("end: June", m3$Special.Notes))
+
+#Q5
