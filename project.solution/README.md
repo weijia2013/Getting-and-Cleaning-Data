@@ -1,11 +1,6 @@
 CodeBook of Getting-and-Cleaning-Data Project
 ========================================================================
 
----
-title: "CodeBook of Getting-and-Cleaning-Data Project"
-author: "Weijia Chen"
----
-
 This is the CodeBook of Getting-and-Cleaning-Data Projetc. This file explains the work that I have done in cleaning up the data.
 
 *       Data for the project can be downloaded from the following url:
