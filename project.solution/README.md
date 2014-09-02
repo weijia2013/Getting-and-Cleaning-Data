@@ -1,7 +1,7 @@
-CodeBook of Getting-and-Cleaning-Data Project
+Introduction of Getting-and-Cleaning-Data Project
 ========================================================================
 
-This is the CodeBook of Getting-and-Cleaning-Data Projetc. This file explains the work that I have done in cleaning up the data.
+This is an introduction of Getting-and-Cleaning-Data Projetc. This file explains how to understand the initial research purpose in order to better understand the course project.
 
 *       Data for the project can be downloaded from the following url:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
