@@ -1,3 +1,6 @@
+CodeBook of Getting-and-Cleaning-Data Project
+========================================================================
+
 ---
 title: "CodeBook of Getting-and-Cleaning-Data Project"
 author: "Weijia Chen"
@@ -12,5 +15,5 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
 
-© Weijia Chen Reserves All Rights, 2014.
 
+## © Weijia Chen Reserves All Rights, 2014.
