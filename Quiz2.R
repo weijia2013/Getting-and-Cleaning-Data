@@ -27,14 +27,14 @@ list(output[[5]]$name, output[[5]]$created_at)
 #Q2
 
 #chang file name to q22
-acs <- read.csv(./GCD/q22.csv)
+acs <- read.csv("./GCD/q22.csv")
 sqldf("select pwgtp1 from acs where AGEP < 50")
 
 
 #Q3
 #load file
-acs <- read.csv(./GCD/q22.csv)
-
+acs <- read.csv("./GCD/q22.csv")
+library(MySQL)
 x <- unique(acs$AGEP)
 y <- sqldf("select distinct AGEP from acs")
 length(x)
@@ -55,7 +55,7 @@ nchar(q2.4.4)
 #use read.fwf function to get col 4
 
 q25 <- "./GCD/q25.for"
-test <- read.fwf(file = q25, width = c(10, 9, 8, 5), skip = 4, header = FALSE)
+t1 <- read.fwf(file = q25, width = c(10, 9, 8, 5), skip = 4, header = FALSE)
 head(t1)
 sum(t1$V4)
 
