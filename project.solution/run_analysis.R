@@ -53,5 +53,5 @@ tidydatamean <- tidydata %>% #Using chain %>% function to sequence the operation
         summarise_each(funs(mean(., na.rm = TRUE)), matches("mean"),matches("std")) #use summarise_each function to calculate each variable means
 
 tidydatamean
-write.table(tidydatamean,"tidydatamean.txt") #Save and creat a second tidy data set names tidydatamean.txt
+write.table(tidydatamean,"tidydatamean.txt", row.name=FALSE) #Save and creat a second tidy data set names tidydatamean.txt
 write.csv(tidydatamean, "tidydatamean.csv") #Save and creat a csv file
