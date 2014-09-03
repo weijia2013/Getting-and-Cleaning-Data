@@ -65,7 +65,7 @@ tidydatamean <- tidydata %>%
         summarise_each(funs(mean(., na.rm = TRUE)), matches("mean"),matches("std")) 
 
 tidydatamean
-write.table(tidydatamean,"tidydatamean.txt") 
+write.table(tidydatamean,"tidydatamean.txt", row.name=FALSE) 
 write.csv(tidydatamean, "tidydatamean.csv") 
 ```
 
